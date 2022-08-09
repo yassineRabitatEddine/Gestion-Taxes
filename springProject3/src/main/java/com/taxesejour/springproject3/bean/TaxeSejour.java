@@ -12,16 +12,16 @@ public class TaxeSejour {
     private int trimestre;
     private int annee;
     private int nbreNuits;
-    private int montantDeBase;
+    private double montantDeBase;
 
     @OneToOne
-    Local local;
+    private Local local;
 
     @OneToOne
-    Redevable redevable;
+    private Redevable redevable;
 
     @OneToOne
-    TauxSejour tauxSejour;
+    private TauxSejour tauxSejour;
 
     public Long getId() {
         return id;
@@ -55,7 +55,7 @@ public class TaxeSejour {
         this.nbreNuits = nbreNuits;
     }
 
-    public int getMontantDeBase() {
+    public double getMontantDeBase() {
         return montantDeBase;
     }
 

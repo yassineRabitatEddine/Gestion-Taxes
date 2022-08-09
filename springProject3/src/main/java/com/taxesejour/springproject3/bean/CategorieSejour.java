@@ -22,7 +22,7 @@ public class CategorieSejour {
     }
 
     @OneToOne
-    TauxSejour tauxSejour;
+    private TauxSejour tauxSejour;
 
     public TauxSejour getTauxSejour() {
         return tauxSejour;
