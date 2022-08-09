@@ -26,7 +26,7 @@ public class Local {
     }
 
     @OneToOne
-    TaxeSejour taxeSejour;
+    private TaxeSejour taxeSejour;
 
     public TaxeSejour getTaxeSejour() {
         return taxeSejour;

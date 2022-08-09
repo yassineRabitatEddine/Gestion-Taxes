@@ -10,7 +10,7 @@ public class TauxSejour {
     @GeneratedValue(strategy = GenerationType.AUTO)
 
     private Long id;
-    private Long montantparnuit;
+    private double montantparnuit;
 
     @OneToOne
     private CategorieSejour categorieSejour;
@@ -23,7 +23,7 @@ public class TauxSejour {
         this.id = id;
     }
 
-    public Long getMontantparnuit() {
+    public double getMontantparnuit() {
         return montantparnuit;
     }
 
