@@ -1,6 +1,6 @@
 package com.taxesejour.springproject3.bean;
 
-
+// Commentaire Stage
 import javax.persistence.*;
 import java.util.List;
 
