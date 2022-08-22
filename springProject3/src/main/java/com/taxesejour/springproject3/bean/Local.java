@@ -19,25 +19,27 @@ public class Local {
     private Redevable redevable;
 
     @ManyToOne
-    private CategorieSejour categorieSejour;
+    private Categorie categorie;
 
-    public CategorieSejour getCategorieSejour() {
-        return categorieSejour;
+
+    @OneToMany
+    private Taxe taxe ;
+
+    public Taxe getTaxe() {
+        return taxe;
     }
 
-    @OneToOne
-    private TaxeSejour taxeSejour;
-
-    public TaxeSejour getTaxeSejour() {
-        return taxeSejour;
+    public void setTaxe(Taxe taxe) {
+        this.taxe = taxe;
     }
 
-    public void setTaxeSejour(TaxeSejour taxeSejour) {
-        this.taxeSejour = taxeSejour;
+
+    public Categorie getCategorie() {
+        return categorie;
     }
 
-    public void setCategorieSejour(CategorieSejour categorieSejour) {
-        this.categorieSejour = categorieSejour;
+    public void setCategorie(Categorie categorie) {
+        this.categorie = categorie;
     }
 
     public Long getId() {

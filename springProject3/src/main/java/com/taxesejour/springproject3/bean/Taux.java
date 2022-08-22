@@ -7,10 +7,20 @@ public class Taux {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id ;
     private double pourcentage ;
-    private String CategLocal ;
-    @OneToOne
+
+    @OneToMany
     private Taxe taxe ;
 
+    @ManyToOne
+    private Categorie categorie;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public Taxe getTaxe() {
         return taxe;
@@ -24,12 +34,13 @@ public class Taux {
         return pourcentage;
     }
 
-    public String getCategLocal() {
-        return CategLocal;
+
+    public Categorie getCategorie() {
+        return categorie;
     }
 
-    public void setCategLocal(String categLocal) {
-        CategLocal = categLocal;
+    public void setCategorie(Categorie categorie) {
+        this.categorie = categorie;
     }
 
     public void setPourcentage(double pourcentage) {

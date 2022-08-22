@@ -8,11 +8,34 @@ public class Categorie {
     private Long id ;
     private String libelle ;
 
+    public Categorie() {
+    }
+
     public Long getId() {
         return id;
     }
 
+    @OneToMany
+    private Taux taux;
 
+    @OneToMany
+    private  Local local ;
+
+    public Local getLocal() {
+        return local;
+    }
+
+    public void setLocal(Local local) {
+        this.local = local;
+    }
+
+    public Taux getTaux() {
+        return taux;
+    }
+
+    public void setTaux(Taux taux) {
+        this.taux = taux;
+    }
 
     public String getLibelle() {
         return libelle;

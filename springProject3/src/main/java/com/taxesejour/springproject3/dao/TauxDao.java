@@ -6,8 +6,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TauxDao extends JpaRepository<Taux,Long> {
-    Taux findByCategLocal(String categlocal);
-    int deleteByCategLocal(String categlocal);
+    Taux findByCategorieLibelle(String Libelle);
+    int deleteByCategorieLibelle(String Libelle);
 
 
 }

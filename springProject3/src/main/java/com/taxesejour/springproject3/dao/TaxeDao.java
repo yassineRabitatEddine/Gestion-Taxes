@@ -13,8 +13,9 @@ public interface TaxeDao extends JpaRepository<Taxe, Long> {
     //Trouver l'ensemble des taxes pour un redevable
     List<Taxe> findByRedevableCin(String cinredevable);
     //taxes payées dans l'annee x pour le local y
-    List<Taxe> findByAnneeAndAndLocalRef(int annee, String ref);
+    List<Taxe> findByAnneeAndLocalRef(int annee, String ref);
     List<Taxe> findByAnnee (int annee);
 
-
+    List<Taxe> findByAnneeAndRedevableCin(int annee, String cin);
+    int deleteByLocalRef(String ref);
 }

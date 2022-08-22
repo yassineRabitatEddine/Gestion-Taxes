@@ -13,8 +13,17 @@ public class Redevable {
     private String nom;
     private String prenom;
 
+    @OneToMany
+    private Local local ;
 
 
+    public Local getLocal() {
+        return local;
+    }
+
+    public void setLocal(Local local) {
+        this.local = local;
+    }
 
     public Long getId() {
         return id;
