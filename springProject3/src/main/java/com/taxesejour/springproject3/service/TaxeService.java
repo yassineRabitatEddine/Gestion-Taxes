@@ -45,10 +45,6 @@ public class TaxeService {
 
 
 
-    @Deprecated
-    public Taxe getOne(Long aLong) {
-        return taxedao.getOne(aLong);
-    }
 
 
     public int save(Taxe taxe) {
