@@ -23,6 +23,8 @@ public class TaxeService {
 
     @Autowired
     private TaxeDao taxedao;
+    @Autowired
+    private TaxeSaveProcess taxeSaveProcess;
 
 
     public List<Taxe> findByLocalRef(String ref) {
@@ -48,7 +50,7 @@ public class TaxeService {
 
 
     public int save(Taxe taxe) {
-        int res = TaxeSaveProcess.save(taxe);
+        int res = taxeSaveProcess.save(taxe);
         return res;
     }
 

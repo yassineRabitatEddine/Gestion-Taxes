@@ -8,8 +8,6 @@ public class Taux {
     private Long id ;
     private double pourcentage ;
 
-    @OneToMany
-    private Taxe taxe ;
 
     @ManyToOne
     private Categorie categorie;
@@ -22,13 +20,7 @@ public class Taux {
         this.id = id;
     }
 
-    public Taxe getTaxe() {
-        return taxe;
-    }
 
-    public void setTaxe(Taxe taxe) {
-        this.taxe = taxe;
-    }
 
     public double getPourcentage() {
         return pourcentage;

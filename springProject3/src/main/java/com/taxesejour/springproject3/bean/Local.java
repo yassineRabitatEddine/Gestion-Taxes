@@ -22,16 +22,10 @@ public class Local {
     private Categorie categorie;
 
 
-    @OneToMany
-    private Taxe taxe ;
 
-    public Taxe getTaxe() {
-        return taxe;
-    }
 
-    public void setTaxe(Taxe taxe) {
-        this.taxe = taxe;
-    }
+
+
 
 
     public Categorie getCategorie() {

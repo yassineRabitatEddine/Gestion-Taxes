@@ -25,7 +25,7 @@ public class CategorieService {
 
     public int  save(Categorie categorie) {
 
-        if(findByLibelle(categorie.getLibelle() )== null) {return -1;}
+        if(findByLibelle(categorie.getLibelle() )!= null) {return -1;}
 
          else {
             categorieDao.save(categorie);
