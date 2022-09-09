@@ -1,17 +1,19 @@
-package com.taxes.service;
+package com.taxesejour.springproject3.service;
 
 import java.util.List;
 import java.util.Optional;
 
-import com.taxes.vo.StatistiqueTaxeTnb;
-import com.taxes.vo.StatistiqueTnbMinMax;
+
+import com.taxesejour.springproject3.bean.TaxeTnb;
+import com.taxesejour.springproject3.dao.TaxeTnbDao;
+import com.taxesejour.springproject3.proces.TaxeTnbSaveProces;
+import com.taxesejour.springproject3.vo.StatistiqueTaxeTnb;
+import com.taxesejour.springproject3.vo.StatistiqueTnbMinMax;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.taxes.bean.TaxeTnb;
-import com.taxes.dao.TaxeTnbDao;
-import com.taxes.proces.TaxeTnbSaveProces;
+
 
 import javax.persistence.EntityManager;
 
@@ -45,7 +47,7 @@ public class TaxeTnbService {
 
 
 	public List<StatistiqueTaxeTnb> calcStat(StatistiqueTnbMinMax statistiqueTnbMinMax ){
-		String query="SELECT NEW com.taxes.vo.StatistiqueTaxeTnb(t.annee,SUM(t.montantBase)) FROM TaxeTnb t WHERE 1=1 ";
+		String query="SELECT NEW com.taxesejour.springproject3.vo.StatistiqueTaxeTnb(t.annee,SUM(t.montantBase)) FROM TaxeTnb t WHERE 1=1 ";
 		if(statistiqueTnbMinMax.getAnneMin()!=null)
 			query+= " AND t.annee >= " +statistiqueTnbMinMax.getAnneMin();
 		if (statistiqueTnbMinMax.getAnneMax()!=null)

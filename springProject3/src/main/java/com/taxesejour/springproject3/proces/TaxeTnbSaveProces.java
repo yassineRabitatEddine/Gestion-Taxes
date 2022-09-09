@@ -1,21 +1,23 @@
-package com.taxes.proces;
+package com.taxesejour.springproject3.proces;
 
+import com.taxesejour.springproject3.bean.Redevable;
+import com.taxesejour.springproject3.bean.TauxTaxeTnb;
+import com.taxesejour.springproject3.bean.TaxeTnb;
+import com.taxesejour.springproject3.bean.Terrain;
+import com.taxesejour.springproject3.dao.TauxTaxeTnbDao;
+import com.taxesejour.springproject3.dao.TaxeTnbDao;
+import com.taxesejour.springproject3.service.RedevableService;
+import com.taxesejour.springproject3.service.TauxTaxeTnbService;
+import com.taxesejour.springproject3.service.TerrainService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.taxes.bean.Redevable;
-import com.taxes.bean.TauxTaxeTnb;
-import com.taxes.bean.TaxeTnb;
-import com.taxes.bean.Terrain;
-import com.taxes.dao.TaxeTnbDao;
-import com.taxes.service.RedevableService;
-import com.taxes.service.TauxTaxeTnbService;
-import com.taxes.service.TerrainService;
+
 
 @Service
 public class TaxeTnbSaveProces {
 	@Autowired
-	private TaxeTnbDao taxetnbdao;
+	private TaxeTnbDao taxeTnbDao;
 	@Autowired
 	private RedevableService redevableService;
 	@Autowired
@@ -38,7 +40,7 @@ public class TaxeTnbSaveProces {
 		// TODO Auto-generated method stub
 		double montant = taxetnb.getTerrain().getSurface()*taxetnb.getTauxTaxeTnb().getMontantMetreCarre();
 		taxetnb.setMontantBase(montant);
-		taxetnbdao.save(taxetnb);
+		taxeTnbDao.save(taxetnb);
 	}
 
 	public int validateSave(TaxeTnb taxetnb) {

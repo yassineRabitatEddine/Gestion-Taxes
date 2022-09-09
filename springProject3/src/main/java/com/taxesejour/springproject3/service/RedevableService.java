@@ -1,18 +1,20 @@
-package com.taxes.service;
+package com.taxesejour.springproject3.service;
 
-import java.util.List;
-import java.util.Optional;
 
+
+import com.taxesejour.springproject3.bean.Redevable;
+import com.taxesejour.springproject3.dao.RedevableDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.taxes.bean.Redevable;
-import com.taxes.dao.RedevableDao;
+import java.util.List;
+
+
 @Service
 public class RedevableService {
 	@Autowired
-	private  RedevableDao redevableDao;
+	private RedevableDao redevableDao;
 
 	public Redevable findByCin(String cin) {
 		return redevableDao.findByCin(cin);

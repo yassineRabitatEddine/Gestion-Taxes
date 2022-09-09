@@ -1,4 +1,4 @@
-package com.taxesejour.springproject3.Process;
+package com.taxesejour.springproject3.proces;
 
 import com.taxesejour.springproject3.bean.Local;
 import com.taxesejour.springproject3.bean.Redevable;

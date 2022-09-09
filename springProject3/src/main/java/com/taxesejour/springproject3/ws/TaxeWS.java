@@ -1,7 +1,7 @@
 package com.taxesejour.springproject3.ws;
 
-import com.taxesejour.springproject3.Process.TaxeSaveProcess;
 import com.taxesejour.springproject3.bean.Taxe;
+import com.taxesejour.springproject3.proces.TaxeSaveProcess;
 import com.taxesejour.springproject3.service.TaxeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

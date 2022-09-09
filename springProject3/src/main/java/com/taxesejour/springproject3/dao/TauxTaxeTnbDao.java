@@ -1,9 +1,9 @@
-package com.taxes.dao;
+package com.taxesejour.springproject3.dao;
 
+import com.taxesejour.springproject3.bean.TauxTaxeTnb;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.taxes.bean.TauxTaxeTnb;
 @Repository
 public interface TauxTaxeTnbDao extends JpaRepository<TauxTaxeTnb, Long> {
 

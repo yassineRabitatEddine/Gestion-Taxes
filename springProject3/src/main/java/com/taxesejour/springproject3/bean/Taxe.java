@@ -11,16 +11,6 @@ public class Taxe {
     private double CA;
     private double montantBase ;
 
-    public Taxe() {
-
-    }
-
-    public Taxe(double CA, Taux taux) {
-        this.taux = taux;
-        this.CA = CA;
-
-    }
-
     //un redevable paye plusieurs taxes
     @ManyToOne
     private Redevable redevable ;

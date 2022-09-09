@@ -8,8 +8,7 @@ public class Categorie {
     private Long id ;
     private String libelle ;
 
-    public Categorie() {
-    }
+
 
     public Long getId() {
         return id;

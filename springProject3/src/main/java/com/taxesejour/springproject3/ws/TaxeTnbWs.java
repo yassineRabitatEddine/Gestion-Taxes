@@ -1,9 +1,13 @@
-package com.taxes.ws;
+package com.taxesejour.springproject3.ws;
 
 import java.util.List;
 
-import com.taxes.vo.StatistiqueTaxeTnb;
-import com.taxes.vo.StatistiqueTnbMinMax;
+
+import com.taxesejour.springproject3.bean.TaxeTnb;
+import com.taxesejour.springproject3.proces.TaxeTnbSaveProces;
+import com.taxesejour.springproject3.service.TaxeTnbService;
+import com.taxesejour.springproject3.vo.StatistiqueTaxeTnb;
+import com.taxesejour.springproject3.vo.StatistiqueTnbMinMax;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,9 +17,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.taxes.bean.TaxeTnb;
-import com.taxes.proces.TaxeTnbSaveProces;
-import com.taxes.service.TaxeTnbService;
 @RestController
 @RequestMapping("api/taxetnb")
 public class TaxeTnbWs {

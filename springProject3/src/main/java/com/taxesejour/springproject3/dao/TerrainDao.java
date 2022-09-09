@@ -1,11 +1,11 @@
-package com.taxes.dao;
+package com.taxesejour.springproject3.dao;
 
 import java.util.List;
 
+import com.taxesejour.springproject3.bean.Terrain;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.taxes.bean.Terrain;
 
 @Repository
 public interface TerrainDao extends JpaRepository<Terrain, Long> {

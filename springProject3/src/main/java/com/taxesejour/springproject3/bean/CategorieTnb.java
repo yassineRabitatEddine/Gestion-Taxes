@@ -1,4 +1,4 @@
-package com.taxes.bean;
+package com.taxesejour.springproject3.bean;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

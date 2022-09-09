@@ -1,4 +1,4 @@
-package com.taxes.vo;
+package com.taxesejour.springproject3.vo;
 
 public class StatistiqueTaxeTnb {
     private double totalMontant;
