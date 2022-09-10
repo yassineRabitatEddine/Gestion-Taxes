@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("/api/Redevable")
+@RequestMapping("/redevable")
 public class RedevableWs {
 	@Autowired
 	public RedevableService redevableService;
@@ -24,9 +24,9 @@ public class RedevableWs {
 	public Redevable findByCin(@PathVariable String cin) {
 		return redevableService.findByCin(cin);
 	}
-	@DeleteMapping("/cin/{cin}")
-	public int deleteByCin(@PathVariable String cin) {
-		return redevableService.deleteByCin(cin);
+	@DeleteMapping("/")
+	public int deleteByCin(@RequestBody redevDelINfo redevDelINfo) {
+		return redevableService.deleteByCin(redevDelINfo.getCin());
 	}
 	@GetMapping("/")
 	public List<Redevable> findAll() {

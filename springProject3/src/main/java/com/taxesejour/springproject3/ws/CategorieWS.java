@@ -18,9 +18,9 @@ public class CategorieWS {
         return categorieService.findByLibelle(Libelle);
     }
 
-    @DeleteMapping("/Libelle/{Libelle}")
-    public int deleteByLibelle(@PathVariable String Libelle) {
-        return categorieService.deleteByLibelle(Libelle);
+    @DeleteMapping("/")
+    public int deleteByLibelle(@RequestBody categDelInfo categDelInfo) {
+        return categorieService.deleteByLibelle(categDelInfo.getLibelle());
     }
     @PostMapping("/")
     public int save(@RequestBody Categorie categorie) {
